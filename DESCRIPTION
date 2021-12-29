@@ -1,0 +1,16 @@
+Package: gameRlife
+Title: John Conway's cellular automata 'Game of Life' in R
+Version: 0.0.1
+Authors@R: 
+    person(given = "Alex",
+           family = "Kalinka",
+           role = c("aut", "cre"),
+           email = "alex.t.kalinka@gmail.com")
+Description: An R implementation of John Conway's cellular automata 'Game of Life'.
+License: MIT + file LICENSE
+Imports: 
+    ggplot2
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.0
