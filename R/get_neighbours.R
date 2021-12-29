@@ -15,6 +15,6 @@ get_neighbours <- function(row, col, array_max){
   nrows <- nrows[c(1,4,6,2,7,2,5,8)]
   ret <- cbind(nrows, ncols)
   ## Wrapping co-ordinates around a torus.
-  ret <- torify_coordinates(ret, array_max)
+  ret <- gameRlife::torify_coordinates(ret, array_max)
   return(ret)
 }
