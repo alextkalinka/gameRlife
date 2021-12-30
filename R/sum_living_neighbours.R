@@ -39,7 +39,7 @@ sum_living_neighbours <- function(board, torify = TRUE){
     blu[nr,] <- c(board[1,-1], board[1,1])
     blu[,nc] <- c(board[-1,1], board[1,1])
     brd[1,] <- c(board[nr,nc], board[nr,-nc])
-    brd[,1] <- c(board[-nr,nc], board[nr,nc])
+    brd[,1] <- c(board[nr,nc], board[-nr,nc])
     bld[1,] <- c(board[nr,-1], board[nr,1])
     bld[,nc] <- c(board[nr,1], board[-nr,1])
   }
