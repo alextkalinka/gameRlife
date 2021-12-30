@@ -8,7 +8,7 @@
 #' @return An 8x2 matrix in which the first column contains row co-oridnates and the second column contains column co-ordinates.
 #' @author Alex Kalinka, \email{alex.t.kalinka@@gmail.com}
 #' @export
-torify_coordinates <- function(coords, array_max){
+.torify_coordinates <- function(coords, array_max){
   # 1. adjust rows.
   coords[coords[,1] == 0,1] <- array_max
   coords[coords[,1] > array_max,1] <- 1

@@ -9,7 +9,7 @@
 #' @return An 8x2 matrix in which the first column contains row co-oridnates and the second column contains column co-ordinates.
 #' @author Alex Kalinka, \email{alex.t.kalinka@@gmail.com}
 #' @export
-get_neighbours <- function(row, col, array_max){
+.get_neighbours <- function(row, col, array_max){
   ncols <- c(rep(col - 1, 3), rep(col, 2), rep(col + 1, 3))
   nrows <- c(rep(row - 1, 3), rep(row, 2), rep(row + 1, 3))
   nrows <- nrows[c(1,4,6,2,7,2,5,8)]
