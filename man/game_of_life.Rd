@@ -4,7 +4,7 @@
 \alias{game_of_life}
 \title{game_of_life}
 \usage{
-game_of_life(seed, num_gens, board_size = 50, animate = TRUE)
+game_of_life(seed, num_gens, board_size = 50, animate = TRUE, torify = TRUE)
 }
 \arguments{
 \item{seed}{An nx2 matrix containing the co-ordinates of \code{n} seeds for the game.}
@@ -14,6 +14,8 @@ game_of_life(seed, num_gens, board_size = 50, animate = TRUE)
 \item{board_size}{An integer specifying the size of the 2D array. Defaults to 50.}
 
 \item{animate}{Logical indicating whether to animate the game (defaults to \code{TRUE}).}
+
+\item{torify}{Logical indicating whether the board should be wrapped up into a torus to prevent inconsistencies at the edges (defaults to \code{TRUE}).}
 }
 \value{
 Each generation of the game is returned as a data frame that contains co-ordinates for only the living cells. Can be used for the side-effect of animating the cellular automata as they evolve.

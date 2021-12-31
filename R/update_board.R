@@ -19,6 +19,5 @@ update_board <- function(board, torify = TRUE){
   bc[board == 0 & nl == 3] <- 1
   bc[board == 1 & nl < 2] <- 0
   bc[board == 1 & nl > 3] <- 0
-  
   return(bc)
 }

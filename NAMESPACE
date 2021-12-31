@@ -3,6 +3,7 @@
 export(.get_neighbours)
 export(.torify_coordinates)
 export(board_df)
+export(build_ggboard)
 export(coords_living)
 export(game_of_life)
 export(sum_living_neighbours)
