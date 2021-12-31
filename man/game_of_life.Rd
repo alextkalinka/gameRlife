@@ -16,7 +16,7 @@ game_of_life(seed, num_gens, board_size = 50, animate = TRUE)
 \item{animate}{Logical indicating whether to animate the game (defaults to \code{TRUE}).}
 }
 \value{
-Each generation of the game is returned as a data frame that contains co-ordinates for only the living cells. Used for the side-effect of animating the cellular automata as they evolve.
+Each generation of the game is returned as a data frame that contains co-ordinates for only the living cells. Can be used for the side-effect of animating the cellular automata as they evolve.
 }
 \description{
 Run the cellular automata Game of Life.
