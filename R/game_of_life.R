@@ -14,19 +14,27 @@
 game_of_life <- function(seed, num_gens, board_size = 50, animate = TRUE, torify = TRUE){
   board <- matrix(0, board_size, board_size)
   board[seed[,1], seed[,2]] <- 1
-  # First generation board data frame.
-  bdf <- gameRlife::board_df(board, board_size, 1)
+  # Seed generation board data frame.
+  bdf <- gameRlife::board_df(board, board_size, 0)
   for(i in 1:num_gens){
     cat(paste("Evolving...generation",i,"\r"))
     # 1. Update the board according to the rules.
     board <- gameRlife::update_board(board, torify)
-    # 2. Convert board into data frame for storage and visualisation.
+    # 2. Convert board into data frame for storage and visualization.
     bdf <- rbind(bdf, gameRlife::board_df(board, board_size, i))
   }
-  cat("\nAnimating...")
+  cat("\n")
   # Build ggplot2 object.
   gpl <- gameRlife::build_ggboard(bdf, board_size)
   # Animate.
-  gameRlife::animate_ggboard(gpl)
-  return(bdf)
+  gan <- gameRlife::build_gganimate_board(gpl, num_gens)
+  if(animate) print(gan)
+  # Return object.
+  ret <- list(seed = seed,
+              num_gens = num_gens,
+              board_DF = bdf,
+              board_ggplot2 = gpl,
+              board_gganimate = gan)
+  class(ret) <- "gameRlife"
+  return(ret)
 }

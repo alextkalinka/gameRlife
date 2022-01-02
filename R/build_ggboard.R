@@ -8,18 +8,21 @@
 #' @return An object of class `ggplot`.
 #' @author Alex Kalinka, \email{alex.t.kalinka@@gmail.com}
 #' @importFrom dplyr %>%
-#' @importFrom ggplot2 ggplot aes geom_tile scale_fill_discrete theme xlim ylim element_rect element_blank
+#' @importFrom ggplot2 ggplot aes geom_tile theme xlim ylim element_rect element_blank scale_y_reverse
 #' @export
 build_ggboard <- function(board_DF, board_size){
   pl <- board_DF %>%
     ggplot2::ggplot(ggplot2::aes(col, row, fill = living)) +
-    ggplot2::geom_tile(na.rm = T, show.legend = F, fill = "black", color="black") +
-    ggplot2::scale_fill_discrete(na.value = "white") +
-    ggplot2::theme(axis.title.x = ggplot2::element_blank(),
+    ggplot2::geom_tile(na.rm = T, show.legend = F, fill = "black", color = "white") +
+    ggplot2::theme(legend.position = "none",
+                   axis.title.x = ggplot2::element_blank(),
                    axis.title.y = ggplot2::element_blank(),
+                   axis.text.x = ggplot2::element_blank(),
+                   axis.text.y = ggplot2::element_blank(),
                    axis.ticks = ggplot2::element_blank(),
-                   panel.background = ggplot2::element_rect(fill="white", colour="white")) +
+                   panel.background = ggplot2::element_rect(fill="white", colour="white"),
+                   panel.border = element_rect(colour = "black", fill=NA, size=1)) +
     ggplot2::xlim(0.5, board_size + 0.5) +
-    ggplot2::ylim(0.5, board_size + 0.5)
+    ggplot2::scale_y_reverse(limits = c(board_size + 0.5, 0.5))
   return(pl)
 }
