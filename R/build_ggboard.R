@@ -22,7 +22,7 @@ build_ggboard <- function(board_DF, board_size){
                    axis.ticks = ggplot2::element_blank(),
                    panel.background = ggplot2::element_rect(fill="white", colour="white"),
                    panel.border = element_rect(colour = "black", fill=NA, size=1)) +
-    ggplot2::xlim(0.5, board_size + 0.5) +
-    ggplot2::scale_y_reverse(limits = c(board_size + 0.5, 0.5))
+    ggplot2::xlim(1, board_size) +
+    ggplot2::scale_y_reverse(limits = c(board_size, 1))
   return(pl)
 }

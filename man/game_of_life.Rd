@@ -18,10 +18,10 @@ game_of_life(seed, num_gens, board_size = 50, animate = TRUE, torify = TRUE)
 \item{torify}{Logical indicating whether the board should be wrapped up into a torus to prevent inconsistencies at the edges (defaults to \code{TRUE}).}
 }
 \value{
-Each generation of the game is returned as a data frame that contains co-ordinates for only the living cells. Can be used for the side-effect of animating the cellular automata as they evolve.
+An object of class \code{gameRlife}. Can be used for the side-effect of animating the cellular automata as they evolve.
 }
 \description{
-Run the cellular automata Game of Life.
+Run John Conway's cellular automata Game of Life.
 }
 \author{
 Alex Kalinka, \email{alex.t.kalinka@gmail.com}

@@ -16,5 +16,5 @@ build_gganimate_board <- function(board_ggplot, num_gen){
                   subtitle = "Generation: {current_frame}",
                   caption = "(R Implementation by Alex Kalinka)") +
     gganimate::transition_manual(generation)
-  return(gganimate::animate(am, nframes = num_gen+1, fps = 3))
+  return(gganimate::animate(am, nframes = num_gen+1, fps = 4))
 }
