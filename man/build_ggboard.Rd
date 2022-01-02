@@ -4,10 +4,12 @@
 \alias{build_ggboard}
 \title{build_ggboard}
 \usage{
-build_ggboard(board_df)
+build_ggboard(board_DF, board_size)
 }
 \arguments{
-\item{board_df}{A data frame containing the co-ordinates of living cells, as produced by \code{gameRlife::board_df}.}
+\item{board_DF}{A data frame containing the co-ordinates of living cells, as produced by \code{gameRlife::board_df}.}
+
+\item{board_size}{An integer specifying the size of the 2D array.}
 }
 \value{
 An object of class \code{ggplot}.

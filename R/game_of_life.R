@@ -24,6 +24,9 @@ game_of_life <- function(seed, num_gens, board_size = 50, animate = TRUE, torify
     bdf <- rbind(bdf, gameRlife::board_df(board, board_size, i))
   }
   cat("\nAnimating...")
-  
-  
+  # Build ggplot2 object.
+  gpl <- gameRlife::build_ggboard(bdf, board_size)
+  # Animate.
+  gameRlife::animate_ggboard(gpl)
+  return(bdf)
 }
