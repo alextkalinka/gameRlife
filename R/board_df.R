@@ -17,8 +17,9 @@ board_df <- function(board, board_size, generation){
   # Extract the co-ordinates of living cells.
   df <- as.data.frame(gameRlife::coords_living(board)) %>%
     dplyr::rename(row = V1, col = V2) %>%
-    dplyr::mutate(living = 1) %>%
-    rbind(data.frame(row = board_size, col = board_size, living = NA)) %>%
+    dplyr::mutate(living = as.factor(1)) %>%
+    # Added for plotting purposes.
+    rbind(data.frame(row = (board_size + 5), col = (board_size + 5), living = NA)) %>%
     dplyr::mutate(generation = generation)
   return(df)
 }
