@@ -35,9 +35,9 @@ devtools::install_github("alextkalinka/gameRlife")
 * Use one of the in-built random seeds:
 
 ```r
-gg <- game_of_life(seed_random4, 
-				   num_gens = 70, 
-				   board_size = 50)
+gg <- game_of_life(seed_random4,
+num_gens = 70,
+board_size = 50)
 ```
 
 This will produce the following animation:
@@ -48,10 +48,10 @@ This will produce the following animation:
 
 ```r
 seed <- make_seed_random(board_size = 50,
-						 proportion_living = 0.4)
-gg <- game_of_life(seed, 
-				   num_gens = 100, 
-				   board_size = 50)
+proportion_living = 0.4)
+gg <- game_of_life(seed,
+num_gens = 100,
+board_size = 50)
 ```
 
 * Define a specific seed of your own.
