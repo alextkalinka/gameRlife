@@ -6,6 +6,7 @@ An `R` implementation of John Conway's cellular automata [*Game of Life*](https:
 
 ## Dependencies
 
+* [`R`](https://www.r-project.org/)
 * [`RStudio`](https://www.rstudio.com/products/rstudio/download/)
 
 Install the following `R` packages from within an active `R` session, e.g.
@@ -55,7 +56,7 @@ gg <- game_of_life(seed,
 
 * Define a specific seed of your own.
 
-For example, the in-built `seed_glider` is a 2x5 matrix of living cell co-ordinates, with the first column specifying the row and the second column specifying the column:
+For example, the in-built `seed_glider` is a 5x2 matrix of living cell co-ordinates, with the first column specifying the row and the second column specifying the column:
 
 ```r
 > seed_glider     [,1] [,2][1,]    2    3[2,]    3    4[3,]    4    2[4,]    4    3[5,]    4    4
