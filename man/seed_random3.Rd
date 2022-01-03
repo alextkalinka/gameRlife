@@ -5,9 +5,9 @@
 \alias{seed_random3}
 \title{seed_random3}
 \description{
-A random seed for the \code{gameRlife::game_of_life}.
+A random seed for the \code{gameRlife::game_of_life}: minimum board size of 50.
 }
 \details{
-A matrix of co-ordinates.
+A matrix of co-ordinates. Minimum board size of 50.
 }
 \keyword{data}
